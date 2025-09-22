@@ -1,232 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeoMKFresh - Agencia de Marketing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoMKFresh</title>
   <style>
     body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f9fafb;
-      color: #333;
-      line-height: 1.7;
-    }
-    header {
-      background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600") no-repeat center center/cover;
-      color: white;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    }
-    header p {
-      margin-top: 1rem;
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-    }
-    nav {
-      background: #0f172a;
+      background: #000; /* Fondo negro elegante */
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+
+    .logo {
+      width: 200px;
+      animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
     }
-    nav a:hover {
-      color: #38bdf8;
+
+    /* Animación de flotación */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
     }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 1.5rem;
-    }
-    h2 {
-      color: #0f172a;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1.05rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 2rem;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.25s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
-    form {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: auto;
-    }
-    form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    form button {
-      background: #0f172a;
-      color: white;
-      padding: 0.9rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #1e293b;
-    }
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      font-size: 0.95rem;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-    .whatsapp:hover {
-      background: #20b357;
+
+    /* Animación de brillo */
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 5px #00f5ff); }
+      to { filter: drop-shadow(0 0 20px #00f5ff); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>NeoMKFresh</h1>
-    <p>La primera agencia de marketing en Pomabamba. Creamos experiencias, fortalecemos marcas y llevamos tu negocio al siguiente nivel.</p>
-  </header>
-
-  <nav>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="nosotros">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      En <strong>NeoMKFresh</strong> creemos que cada negocio tiene una historia única que merece ser contada de manera auténtica y efectiva.  
-      Somos pioneros en Pomabamba con un enfoque fresco y creativo que combina la tradición local con las últimas tendencias del marketing digital.  
-    </p>
-    <p>
-      Nuestro propósito es claro: impulsar a los emprendedores y empresas a crecer, posicionarse y conectar emocionalmente con su público.  
-      No solo diseñamos campañas, construimos relaciones duraderas y experiencias que generan resultados reales.  
-    </p>
-  </section>
-
-  <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800" alt="Marketing Digital">
-        <h3>Marketing Digital</h3>
-        <p>Campañas inteligentes en redes sociales y publicidad digital que maximizan tu visibilidad y captan clientes potenciales.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" alt="Branding">
-        <h3>Branding & Diseño</h3>
-        <p>Construimos identidades visuales sólidas y elegantes: logotipos, paletas de color y diseños memorables.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581093588401-22a5b38e1c1d?w=800" alt="Audio">
-        <h3>Producción de Audio</h3>
-        <p>Spots publicitarios, narraciones y jingles que transmiten el mensaje de tu marca con impacto.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="Video">
-        <h3>Producción de Video</h3>
-        <p>Contenido audiovisual minimalista, moderno y atractivo para redes sociales, empresas y campañas.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800" alt="Capacitaciones">
-        <h3>Capacitaciones</h3>
-        <p>Talleres dinámicos y prácticos en ventas, marketing y liderazgo para equipos de trabajo y emprendedores.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="Asesoría">
-        <h3>Asesoría Personalizada</h3>
-        <p>Orientación estratégica para tomar decisiones inteligentes que lleven tu negocio a nuevas oportunidades.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Estamos listos para escuchar tus ideas y llevarlas a la acción. Escríbenos y conversemos sobre cómo podemos hacer crecer tu proyecto.</p>
-    <p>📍 Dirección: Calle Principal 123, Pomabamba</p>
-    <p>📧 Correo: <a href="mailto:contacto@neomkfresh.pe">contacto@neomkfresh.pe</a></p>
-    <p>📞 Teléfono: +51 900 000 000</p>
-
-    <form action="mailto:contacto@neomkfresh.pe" method="post" enctype="text/plain">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" required>
-      
-      <label>Correo electrónico:</label>
-      <input type="email" name="correo" required>
-      
-      <label>Mensaje:</label>
-      <textarea name="mensaje" rows="5" required></textarea>
-      
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 NeoMKFresh - Todos los derechos reservados | Inspirando negocios en Pomabamba</p>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/51900000000" target="_blank">WhatsApp</a>
+  <img src="JHNBHHBHB.png" alt="Logo NeoMKFresh" class="logo">
 </body>
 </html>
